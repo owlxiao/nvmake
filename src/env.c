@@ -393,7 +393,7 @@ char * expandVar (
     if ( result )
     {
         resultSize = strlen(result);
-        memmove(&fmtres[varArgSize], &fmtres[varValueSize], resultSize - varValueSize);
+        memmove(&fmtres[varArgSize], &fmtres[varValueSize], resultSize - varValueSize + 1);
         return memcpy(fmtres, varArg, varArgSize);
     }
     return result;
