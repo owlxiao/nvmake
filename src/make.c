@@ -7,7 +7,7 @@ int MakeAllModules () {
     result = 0;
     if ( Global.modules_count <= 0 )
     {
-        //
+        result = ExecuteGnuMake();
     }
     else
     {
